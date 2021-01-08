@@ -25,7 +25,7 @@ public class PaymentController {
         if (payment != null) {
             return new CommonResult<>(200, "查询成功", payment);
         } else {
-            return new CommonResult<>(404, "查询失败,id: " + id);
+            return new CommonResult<>(500, "查询失败,id: " + id);
         }
     }
 
@@ -34,9 +34,9 @@ public class PaymentController {
         int insert = paymentService.insert(payment);
         log.info("插入结果：{}", insert);
         if (insert > 0) {
-            return new CommonResult<>(200, "插入成功", insert);
+            return new CommonResult<>(200, "插入成功");
         } else {
-            return new CommonResult<>(404, "插入失败");
+            return new CommonResult<>(500, "插入失败");
         }
     }
 }
