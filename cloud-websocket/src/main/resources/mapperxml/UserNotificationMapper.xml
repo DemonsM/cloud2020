@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ink.springcloud.mapper.UserNotificationMapper">
+  <resultMap id="BaseResultMap" type="com.ink.springcloud.domain.UserNotification">
+    <!--@mbg.generated-->
+    <!--@Table user_notification-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="notification_id" jdbcType="BIGINT" property="notificationId" />
+    <result column="status" jdbcType="BOOLEAN" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, notification_id, `status`
+  </sql>
+  <insert id="insertSelective" parameterType="com.ink.springcloud.domain.UserNotification">
+    <!--@mbg.generated-->
+    insert into user_notification
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="notificationId != null">
+        notification_id,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationId != null">
+        #{notificationId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=BOOLEAN},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ink.springcloud.domain.UserNotification">
+    <!--@mbg.generated-->
+    update user_notification
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="notificationId != null">
+        notification_id = #{notificationId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=BOOLEAN},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
