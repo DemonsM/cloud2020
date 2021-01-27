@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.Date;
 
-@ApiModel(value = "com-ink-springcloud-domain-Notification")
+@ApiModel(value = "com-ink-domain-Notification")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

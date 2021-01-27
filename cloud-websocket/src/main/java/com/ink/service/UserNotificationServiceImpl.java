@@ -6,6 +6,7 @@ import com.ink.service.impl.UserNotificationService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class UserNotificationServiceImpl implements UserNotificationService {
@@ -23,4 +24,9 @@ public class UserNotificationServiceImpl implements UserNotificationService {
         return userNotificationMapper.updateByPrimaryKeySelective(record);
     }
 
+    @Override
+    public int updateBatchSelective(List<UserNotification> list) {
+        return userNotificationMapper.updateBatchSelective(list);
+    }
 }
+

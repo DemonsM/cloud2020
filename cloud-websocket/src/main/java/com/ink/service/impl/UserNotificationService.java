@@ -2,6 +2,8 @@ package com.ink.service.impl;
 
 import com.ink.domain.UserNotification;
 
+import java.util.List;
+
 public interface UserNotificationService {
 
 
@@ -9,4 +11,6 @@ public interface UserNotificationService {
 
     int updateByPrimaryKeySelective(UserNotification record);
 
+    int updateBatchSelective(List<UserNotification> list);
 }
+

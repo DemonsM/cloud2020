@@ -3,6 +3,8 @@ package com.ink.mapper;
 import com.ink.domain.Notification;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface NotificationMapper {
     /**
@@ -20,4 +22,6 @@ public interface NotificationMapper {
      * @return update count
      */
     int updateByPrimaryKeySelective(Notification record);
+
+    int updateBatchSelective(List<Notification> list);
 }

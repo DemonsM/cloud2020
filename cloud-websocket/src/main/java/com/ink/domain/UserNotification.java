@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-@ApiModel(value = "com-ink-springcloud-domain-UserNotification")
+@ApiModel(value = "com-ink-domain-UserNotification")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

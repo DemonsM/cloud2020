@@ -2,6 +2,8 @@ package com.ink.service.impl;
 
 import com.ink.domain.User;
 
+import java.util.List;
+
 public interface UserService {
 
 
@@ -9,4 +11,6 @@ public interface UserService {
 
     int updateByPrimaryKeySelective(User record);
 
+    int updateBatchSelective(List<User> list);
 }
+

@@ -6,6 +6,7 @@ import com.ink.service.impl.NotificationService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class NotificationServiceImpl implements NotificationService {
@@ -23,4 +24,9 @@ public class NotificationServiceImpl implements NotificationService {
         return notificationMapper.updateByPrimaryKeySelective(record);
     }
 
+    @Override
+    public int updateBatchSelective(List<Notification> list) {
+        return notificationMapper.updateBatchSelective(list);
+    }
 }
+
