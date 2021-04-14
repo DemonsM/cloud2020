@@ -5,3 +5,16 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.196.55.97:3306/test_cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+server:
+  port: 8001
+
+
+
+

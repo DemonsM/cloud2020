@@ -5,8 +5,6 @@ import com.ink.domain.Notification;
 import java.util.List;
 
 public interface NotificationService {
-
-
     int insertSelective(Notification record);
 
     int updateByPrimaryKeySelective(Notification record);
